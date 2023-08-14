@@ -1,0 +1,70 @@
+.animate {
+    animation: var(--duration) horizontal linear forwards, var(--duration) vertical linear forwards;
+}
+
+.animate-reverse {
+    animation-direction: reverse;
+}
+
+.animate-pause {
+    animation-play-state: paused;
+}
+
+.hide-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    inset: 0;
+    animation: var(--duration) backward linear forwards;
+}
+
+.hide-background--reverse {
+    animation-name: backward-reverse;
+}
+
+.hide-background--pause {
+    animation-play-state: paused;
+}
+
+@keyframes horizontal {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes vertical {
+    12.5%, 87.5% {
+        top: 35%;
+    }
+    25%, 75% {
+        top: 15%;
+    }
+    37.5%, 62.5% {
+        top: 5%;
+    }
+    50% {
+        top: 0
+    }
+}
+
+@keyframes backward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes backward-reverse {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

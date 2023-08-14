@@ -1,0 +1,12 @@
+.draw {
+  animation: draw 250ms forwards;
+}
+
+.reverse {
+  animation: draw 250ms reverse forwards;
+}
+
+@keyframes draw {
+  0%{ height:  0}
+  100% {height: 100%}
+}

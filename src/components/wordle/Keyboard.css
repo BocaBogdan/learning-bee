@@ -1,0 +1,3 @@
+.keyboard {
+    grid-template-columns: repeat(20, 1fr);
+}
